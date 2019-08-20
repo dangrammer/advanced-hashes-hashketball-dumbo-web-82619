@@ -277,10 +277,10 @@ def winning_team
             team_points.push(info)
           end
           team_points.reduce(:+)
-          binding.pry
         end
       end
     end
+    binding.pry
   end
 end
 
