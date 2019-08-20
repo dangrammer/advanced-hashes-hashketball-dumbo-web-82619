@@ -285,8 +285,8 @@ def winning_team
       if data == :player
         details.each do |player_info|
           team_score.push(player_info[:points])
+          binding.pry
         end
-        binding.pry
       end
     end
     if team_score.reduce(:+) == scores.max
