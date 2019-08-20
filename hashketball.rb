@@ -277,6 +277,7 @@ def winning_team
           team_score.push(player_info[:points])
         end
         scores.push(team_score.reduce(:+))
+        binding.pry
       end
     end
     team_info.each do |data, details|
