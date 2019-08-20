@@ -285,7 +285,6 @@ def winning_team
       if data == :player
         details.each do |player_info|
           team_score.push(player_info[:points])
-          binding.pry
         end
       end
     end
@@ -293,6 +292,7 @@ def winning_team
       return team_info[:team_name]
     end
   end
+  binding.pry
 end
 
 
