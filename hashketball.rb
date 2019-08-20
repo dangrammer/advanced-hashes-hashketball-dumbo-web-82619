@@ -268,16 +268,18 @@ end
 
 
 def winning_team
-  team_points = []
+  scores = []
   game_hash.each do |place, team_info|
     team_info.each do |data, details|
       if data == :player
-        details.each do |stat, info|
-          if stat == :points
-            team_points.push(info)
-          end
-          team_points.reduce(:+)
+        details.each do |player_info|
+          team_score = []
+          team_score.push(player_info[:points])
         end
+        scores.push(team_score.reduce(:+))
+      end
+    end
+    if 
       end
     end
   end
