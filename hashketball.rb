@@ -306,7 +306,9 @@ def player_with_longest_name
       end
     end
   end
-  longest_name = names.reduce do 
+  names.reduce do |memo, name|
+    memo.length > name.length ? memo : name
+  end
 end
 
 
