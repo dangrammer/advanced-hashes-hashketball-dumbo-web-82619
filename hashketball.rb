@@ -288,9 +288,9 @@ def winning_team
         end
       end
     end
-  end
-  if team_score.reduce(:+) == scores.max
+    if team_score.reduce(:+) == scores.max
       return team_info[:team_name]
+    end
   end
 end
 
