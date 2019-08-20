@@ -335,7 +335,7 @@ def long_name_steals_a_ton?
       end
     end
   end
-  name.include?(player_with_longest_name) ? true : false
+  name.include?(player_with_longest_name)
 end
 
 
