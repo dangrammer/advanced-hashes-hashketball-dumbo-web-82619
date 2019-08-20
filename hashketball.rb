@@ -276,9 +276,22 @@ def winning_team
           team_score = []
           team_score.push(player_info[:points])
         end
-        scores.push(team_score.reduce(:+))
       end
-      binding.pry
+    end
+    scores.push(team_score.reduce(:+))
+  end
+  game_hash.each do |place, team_info|
+    team_info.each do |data, details|
+      if data == :player
+        details.each do |player_info|
+          team_score = []
+          team_score.push(player_info[:points])
+        end
+      end
+    end
+    scores.push(team_score.reduce(:+))
+  end
+      
     end
     team_info.each do |data, details|
       if data == :player
