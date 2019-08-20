@@ -299,8 +299,9 @@ def player_with_longest_name
   game_hash.each do |place, team_info|
     team_info.each do |data, details|
       if data == :players
-        details.reduce do |memo, (stat, info)|
-          if stat == :player
+        details.reduce do |memo, player_info|
+          memo = player_info[:player]
+          memo.length > player_info[:player] ? 
             
           end
         end
