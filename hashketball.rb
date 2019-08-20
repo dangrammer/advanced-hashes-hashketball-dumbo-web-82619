@@ -280,7 +280,6 @@ def winning_team
         end
       end
     end
-    binding.pry
   end
 end
 
