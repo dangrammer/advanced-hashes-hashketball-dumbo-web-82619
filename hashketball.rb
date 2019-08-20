@@ -286,21 +286,9 @@ def winning_team
         details.each do |player_info|
           team_score = []
           team_score.push(player_info[:points])
-        end
-      end
-    end
-    scores.push(team_score.reduce(:+))
-  end
-      
-    end
-    team_info.each do |data, details|
-      if data == :player
-        details.each do |player_info|
-          team_score = []
-          team_score.push(player_info[:points])
-        end
-        if team_score == scores.max
-          return team_info[:team_name]
+          if team_score.reduce(:+) == scores.max
+            return team_info[:team_name]
+          end
         end
       end
     end
