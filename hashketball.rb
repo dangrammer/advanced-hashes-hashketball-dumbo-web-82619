@@ -301,9 +301,7 @@ def player_with_longest_name
       if data == :players
         details.reduce do |memo, player_info|
           memo = player_info[:player]
-          memo.length > player_info[:player] ? 
-            
-          end
+          memo.length > player_info[:player].length ? memo : player_info[:player]
         end
       end
     end
